@@ -1,0 +1,8 @@
+Source: tzdata-java
+Section: misc
+Priority: extra
+Maintainer: ach <adrian.chomicki@gmail.com>
+
+Package: tzdata-java
+Architecture: all
+Description: dummy package

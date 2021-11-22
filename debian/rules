@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+
+DVER=$(VERSION)-$(RELEASE)
+
+clean:
+	dh_testdir
+	dh_clean
+
+binary:
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+	dh_install
+	dh_installchangelogs
+	dh_installdocs
+	dh_installexamples
+	dh_installman
+	dh_installcatalogs
+	dh_link
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_gencontrol -- -v$(DVER)
+	dh_md5sums
+	dh_builddeb --destdir=.
